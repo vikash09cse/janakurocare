@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="JanakUROCare – Advanced urology centre in Siwan. Kidney, prostate and urological treatment with laser and laparoscopic surgery. Trusted by 50,000+ patients across Bihar.">
+    <meta name="theme-color" content="#1f599c">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()">
+    <title>JanakUROCare – Urology & Laser Surgery in Siwan</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body>
+    <a href="#main-content" class="u-skip-link">Skip to main content</a>
+
+    <!-- Site header -->
+    <header class="c-header">
+        <div class="l-container">
+            <div class="c-header__wrapper u-flex-between">
+                <div class="c-header__branding">
+                    <a href="/" class="c-header__logo" aria-label="JanakUROCare – Home">
+                        <img src="assets/img/logo.png" alt="JanakUROCare" width="160" height="64">
+                    </a>
+                </div>
+                <nav class="c-header__nav" aria-label="Primary Navigation">
+                    <ul class="c-header__menu">
+                        <li class="c-header__item is-active">
+                            <a href="/" class="c-header__link">Home</a>
+                        </li>
+                        <li class="c-header__item">
+                            <a href="male-sexual.html" class="c-header__link">Male Sexual</a>
+                        </li>
+                        <li class="c-header__item c-header__item--has-submenu">
+                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu">
+                                Services
+                                <span class="material-symbols-outlined c-header__arrow" aria-hidden="true">expand_more</span>
+                            </button>
+                            <ul class="c-header__submenu" id="header-services-menu" role="menu">
+                                <li class="c-header__submenu-item" role="none">
+                                    <a href="for-men.html" class="c-header__submenu-link" role="menuitem">For Men</a>
+                                </li>
+                                <li class="c-header__submenu-item" role="none">
+                                    <a href="for-women.html" class="c-header__submenu-link" role="menuitem">For Women</a>
+                                </li>
+                                <li class="c-header__submenu-item" role="none">
+                                    <a href="general-urology.html" class="c-header__submenu-link" role="menuitem">General Urology</a>
+                                </li>
+                                <li class="c-header__submenu-item" role="none">
+                                    <a href="patient.html" class="c-header__submenu-link" role="menuitem">Patient</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="c-header__item">
+                            <a href="laser-surgery.html" class="c-header__link">Laser Surgery</a>
+                        </li>
+                        <li class="c-header__item">
+                            <a href="about.html" class="c-header__link">About</a>
+                        </li>
+                        <li class="c-header__item">
+                            <a href="blog.html" class="c-header__link">Blog</a>
+                        </li>
+                        <li class="c-header__item">
+                            <a href="contact.html" class="c-header__link">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="c-button c-button--primary c-header__cta">
+                        <span class="material-symbols-outlined" aria-hidden="true">mobile_chat</span>
+                        Book Appointment
+                    </a>
+                </nav>
+                <button type="button" class="c-header__toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
+                    <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile navigation drawer -->
+    <div class="c-drawer__overlay" id="overlay" aria-hidden="true"></div>
+    <div class="c-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile menu" aria-hidden="true">
+        <div class="c-drawer__header">
+            <span class="c-drawer__title">Menu</span>
+            <button type="button" class="c-drawer__close" id="closeDrawer" aria-label="Close menu">
+                <span class="material-symbols-outlined" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <nav class="c-drawer__nav" aria-label="Mobile Navigation">
+            <ul class="c-drawer__menu">
+                <li class="c-drawer__item is-active">
+                    <a href="index.html" class="c-drawer__link">Home</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="male-sexual.html" class="c-drawer__link">Male Sexual</a>
+                </li>
+                <li class="c-drawer__item c-drawer__item--submenu">
+                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu">
+                        Services
+                        <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="c-drawer__submenu" id="drawer-services-menu">
+                        <li><a href="for-men.html" class="c-drawer__link">For Men</a></li>
+                        <li><a href="for-women.html" class="c-drawer__link">For Women</a></li>
+                        <li><a href="general-urology.html" class="c-drawer__link">General Urology</a></li>
+                        <li><a href="patient.html" class="c-drawer__link">Patient</a></li>
+                    </ul>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="laser-surgery.html" class="c-drawer__link">Laser Surgery</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="about.html" class="c-drawer__link">About</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="blog.html" class="c-drawer__link">Blog</a>
+                </li>
+                <li class="c-drawer__item">
+                    <a href="contact.html" class="c-drawer__link">Contact</a>
+                </li>
+            </ul>
+            <a href="contact.html" class="c-button c-button--primary c-drawer__cta">
+                <span class="material-symbols-outlined" aria-hidden="true">mobile_chat</span>
+                Book Appointment
+            </a>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <main id="main-content">
+        <section id="hero" class="hero l-section l-section--tint" aria-labelledby="hero-title">
+            <div class="l-container">
+                <div class="l-grid l-grid--2 hero__grid">
+                    <div class="hero__content">
+                        <span class="c-badge u-mb-4">
+                            <span class="material-symbols-outlined" aria-hidden="true">medical_services</span>
+                            Advanced Urology Centre in Siwan
+                        </span>
+                        <h1 class="hero__title" id="hero-title">
+                            Advanced Treatment for Kidney, Prostate & Urological Problems in Siwan
+                        </h1>
+                        <p class="hero__description">
+                            Get world-class laser and laparoscopic urology treatment with minimal pain and faster recovery.
+                            Trusted by 50,000+ patients across Bihar.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="contact.html" class="c-button c-button--primary">Book Appointment</a>
+                        </div>
+                    </div>
+                    <div class="hero__image" aria-hidden="true">
+                        <!-- Hero image placeholder -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="stats l-section l-section--white l-section--bordered" aria-labelledby="stats-heading">
+            <h2 id="stats-heading" class="u-sr-only">Our achievements</h2>
+            <div class="l-container">
+                <div class="l-grid l-grid--4 stats__grid">
+                    <div class="stats__item">
+                        <span class="material-symbols-outlined stats__icon" aria-hidden="true">medical_services</span>
+                        <div class="stats__content">
+                            <h3 class="stats__number">25,000+</h3>
+                            <p class="stats__label">Surgeries Performed</p>
+                        </div>
+                    </div>
+                    <div class="stats__item">
+                        <span class="material-symbols-outlined stats__icon" aria-hidden="true">calendar_month</span>
+                        <div class="stats__content">
+                            <h3 class="stats__number">20+</h3>
+                            <p class="stats__label">Years Experience</p>
+                        </div>
+                    </div>
+                    <div class="stats__item">
+                        <span class="material-symbols-outlined stats__icon" aria-hidden="true">sentiment_satisfied</span>
+                        <div class="stats__content">
+                            <h3 class="stats__number">50,000+</h3>
+                            <p class="stats__label">Happy Patients</p>
+                        </div>
+                    </div>
+                    <div class="stats__item">
+                        <span class="material-symbols-outlined stats__icon" aria-hidden="true">biotech</span>
+                        <div class="stats__content">
+                            <h3 class="stats__number">Latest</h3>
+                            <p class="stats__label">Laser Technology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="specialists" class="specialists l-section l-section--alt" aria-labelledby="specialists-heading">
+            <div class="l-container">
+                <header class="c-section-heading">
+                    <span class="c-badge u-mb-4">
+                        <span class="material-symbols-outlined" aria-hidden="true">medical_services</span>
+                        Meet Your Doctor
+                    </span>
+                    <h2 class="c-section-heading__title" id="specialists-heading">Meet Our Top Urological Surgery Specialists Today</h2>
+                    <p class="c-section-heading__subtitle">Select from our internationally-trained surgeons.</p>
+                </header>
+                <article class="c-card c-card--media c-card--center l-grid l-grid--profile">
+                    <div class="c-card__media">
+                        <img src="assets/img/ankit.png" alt="Dr. Ankit Raj, Urological Surgeon" loading="lazy">
+                    </div>
+                    <div class="c-card__body">
+                        <div class="c-card__header">
+                            <span class="c-card__meta">20+ Years Experience</span>
+                            <h3 class="c-card__title c-card__title--lg">Dr. Ankit Raj</h3>
+                            <p class="c-card__subtitle">Senior Urologist &amp; Laser Surgery Specialist</p>
+                        </div>
+                        <ul class="c-list c-list--check u-mb-4" aria-label="Qualifications">
+                            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span> MBBS &amp; MAMC, New Delhi</li>
+                            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span> MS (General Surgery) &amp; Lady Hardinge Medical College, Delhi</li>
+                            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span> MCh (Urology) – IGIMS, Patna</li>
+                            <li><span class="material-symbols-outlined" aria-hidden="true">check_circle</span> Former Senior Resident – RML Hospital, Delhi &amp; IGIMS, Patna</li>
+                        </ul>
+                        <p class="u-mb-5">
+                            With over 20 years of experience and 25,000+ successful surgeries, Dr. Ankit Raj is one of the most trusted urologists in Bihar. He specializes in laser stone surgery, HoLEP prostate treatment, and laparoscopic uro-oncology procedures.
+                        </p>
+                        <a href="contact.html" class="c-button c-button--primary">Book Appointment</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="services-men" class="services-men l-section l-section--white" aria-labelledby="services-men-heading">
+            <div class="l-container">
+                <header class="c-section-heading">
+                    <span class="c-badge u-mb-4">
+                        <span class="material-symbols-outlined" aria-hidden="true">male</span>
+                        Services For Men
+                    </span>
+                    <h2 class="c-section-heading__title" id="services-men-heading">Services For Men Includes</h2>
+                    <p class="c-section-heading__subtitle">
+                        At JanakUROCare, our experienced doctors offer a wide range of men's services to treat urologic health conditions, including:
+                    </p>
+                </header>
+                <div class="services-men__grid l-grid l-grid--2">
+                    <article class="c-card services-men__card">
+                        <div class="services-men__card-image">
+                            <span class="services-men__card-placeholder" aria-hidden="true">HIFU</span>
+                            <img src="assets/img/hifu.png" alt="HIFU - High-intensity focused ultrasound for prostate" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-men__card-content">
+                            <h3 class="c-card__title services-men__card-title">HIFU</h3>
+                            <p class="c-card__excerpt">HIFU stands for high-intensity focused ultrasound. It is a minimally invasive procedure that uses ultrasound waves to heat and destroy prostate cancer cells.</p>
+                            <a href="#" class="c-button c-button--secondary services-men__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-men__card">
+                        <div class="services-men__card-image">
+                            <span class="services-men__card-placeholder" aria-hidden="true">Vasectomy</span>
+                            <img src="assets/img/vasectomy.png" alt="Vasectomy procedure" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-men__card-content">
+                            <h3 class="c-card__title services-men__card-title">Vasectomy</h3>
+                            <p class="c-card__excerpt">Vasectomy is a permanent way to prevent pregnancy and has a 99% success rate. It's a surgical operation in which your surgeon cuts or blocks the tubes that carry sperm.</p>
+                            <a href="#" class="c-button c-button--secondary services-men__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-men__card">
+                        <div class="services-men__card-image">
+                            <span class="services-men__card-placeholder" aria-hidden="true">Urolift</span>
+                            <img src="assets/img/urolift.png" alt="Urolift minimally invasive procedure" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-men__card-content">
+                            <h3 class="c-card__title services-men__card-title">Urolift</h3>
+                            <p class="c-card__excerpt">The urologists at JanakUROCare are highly trained in diagnosing and treating prostate issues. They are experts in minimally invasive procedures such as Urolift.</p>
+                            <a href="#" class="c-button c-button--secondary services-men__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-men__card">
+                        <div class="services-men__card-image">
+                            <span class="services-men__card-placeholder" aria-hidden="true">Rezum</span>
+                            <img src="assets/img/rezum.png" alt="Rezum water vapour therapy for BPH" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-men__card-content">
+                            <h3 class="c-card__title services-men__card-title">Rezum</h3>
+                            <p class="c-card__excerpt">Rezum is a minimally invasive transurethral water vapour therapy for benign prostatic enlargement which uses thermal energy for treatment.</p>
+                            <a href="#" class="c-button c-button--secondary services-men__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-men__card">
+                        <div class="services-men__card-image">
+                            <span class="services-men__card-placeholder" aria-hidden="true">Aquablation</span>
+                            <img src="assets/img/aquablation.png" alt="Aquablation therapy for BPH" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-men__card-content">
+                            <h3 class="c-card__title services-men__card-title">Aquablation</h3>
+                            <p class="c-card__excerpt">Aquablation therapy is a surgical treatment for benign prostatic hyperplasia (BPH). We are proud to offer this advanced, minimally invasive option.</p>
+                            <a href="#" class="c-button c-button--secondary services-men__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-men__card">
+                        <div class="services-men__card-image">
+                            <span class="services-men__card-placeholder" aria-hidden="true">Nanoknife</span>
+                            <img src="assets/img/nanoknife.png" alt="Nanoknife treatment for prostate cancer" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-men__card-content">
+                            <h3 class="c-card__title services-men__card-title">Nanoknife</h3>
+                            <p class="c-card__excerpt">Nanoknife is a painless and minimally invasive surgical technique used in the treatment of prostate cancer. This therapy is focused on targeted treatment.</p>
+                            <a href="#" class="c-button c-button--secondary services-men__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="services-women" class="services-women l-section l-section--alt" aria-labelledby="services-women-heading">
+            <div class="l-container">
+                <header class="c-section-heading">
+                    <span class="c-badge u-mb-4">
+                        <span class="material-symbols-outlined" aria-hidden="true">female</span>
+                        Services For Women
+                    </span>
+                    <h2 class="c-section-heading__title" id="services-women-heading">Services For Women Includes</h2>
+                    <p class="c-section-heading__subtitle">
+                        The specially trained and highly experienced staff at JanakUROCare offer healthcare to women with a variety of urological conditions:
+                    </p>
+                </header>
+                <div class="services-women__grid l-grid l-grid--2">
+                    <article class="c-card services-women__card">
+                        <div class="services-women__card-image">
+                            <span class="services-women__card-placeholder" aria-hidden="true">UTI</span>
+                            <img src="assets/img/urinary-tract-Infection.png" alt="Urinary Tract Infection (UTI)" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-women__card-content">
+                            <h3 class="c-card__title services-women__card-title">Urinary Tract Infection (UTI)</h3>
+                            <p class="c-card__excerpt">UTIs are common infections that happen when bacteria, often from the skin or rectum, enter the urethra, and infect the urinary tract.</p>
+                            <a href="#" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-women__card">
+                        <div class="services-women__card-image">
+                            <span class="services-women__card-placeholder" aria-hidden="true">Interstim</span>
+                            <img src="assets/img/interstim-therapy.png" alt="Interstim Therapy" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-women__card-content">
+                            <h3 class="c-card__title services-women__card-title">Interstim Therapy</h3>
+                            <p class="c-card__excerpt">Interstim® therapy is used to stimulate the sacral nerves responsible for the overactive bladder reflex. It's a 2 step process.</p>
+                            <a href="#" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-women__card">
+                        <div class="services-women__card-image">
+                            <span class="services-women__card-placeholder" aria-hidden="true">Kidney Stones</span>
+                            <img src="assets/img/kidney-stones.png" alt="Kidney Stones" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-women__card-content">
+                            <h3 class="c-card__title services-women__card-title">Kidney Stones</h3>
+                            <p class="c-card__excerpt">Kidney stones are solid materials comprised of minerals and salts found in your urine, including calcium, phosphorus, and oxalate.</p>
+                            <a href="#" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>
+                    <article class="c-card services-women__card">
+                        <div class="services-women__card-image">
+                            <span class="services-women__card-placeholder" aria-hidden="true">Mona Lisa Touch</span>
+                            <img src="assets/img/vaginal-rejuvenation.png" alt="Vaginal Rejuvenation - Mona Lisa Touch" loading="lazy" onerror="this.style.display='none'">
+                        </div>
+                        <div class="services-women__card-content">
+                            <h3 class="c-card__title services-women__card-title">Vaginal Rejuvenation – Mona Lisa Touch</h3>
+                            <p class="c-card__excerpt">Vaginal rejuvenation using MonaLisa Touch laser technology stimulates your body's natural production of collagen to restore the vaginal tissue structure and increase comfort.</p>
+                            <a href="#" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                        </div>
+                    </article>                    
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials l-section l-section--white" aria-labelledby="testimonials-heading">
+            <div class="l-container">
+                <header class="c-section-heading">
+                    <span class="c-badge c-badge--teal u-mb-4">
+                        <span class="material-symbols-outlined" aria-hidden="true">rate_review</span>
+                        Testimonials
+                    </span>
+                    <h2 class="c-section-heading__title" id="testimonials-heading">What Our Clients Say</h2>
+                    <p class="c-section-heading__subtitle">Don't just take our word for it — hear from our satisfied clients</p>
+                </header>
+                <div class="testimonials__grid l-grid l-grid--4">
+                    <article class="c-card testimonials__card">
+                        <div class="testimonials__stars" aria-hidden="true">★★★★★</div>
+                        <blockquote class="testimonials__quote">"I had a 12mm kidney stone and was very worried. Dr. Ankit Raj performed RIRS laser surgery and I was discharged the next day. No pain, no cut. Highly recommend!"</blockquote>
+                        <p class="testimonials__name">Rajesh Kumar</p>
+                        <p class="testimonials__location">Siwan</p>
+                    </article>
+                    <article class="c-card testimonials__card">
+                        <div class="testimonials__stars" aria-hidden="true">★★★★★</div>
+                        <blockquote class="testimonials__quote">"My father had prostate enlargement and difficulty urinating. After HoLEP laser surgery at Janak UroCare, he recovered within a week. The staff was very caring."</blockquote>
+                        <p class="testimonials__name">Suresh Prasad</p>
+                        <p class="testimonials__location">Gopalganj</p>
+                    </article>
+                    <article class="c-card testimonials__card">
+                        <div class="testimonials__stars" aria-hidden="true">★★★★★</div>
+                        <blockquote class="testimonials__quote">"My husband needed laparoscopic surgery for varicocele. Dr. Raj explained everything in simple language. The surgery was successful and recovery was quick."</blockquote>
+                        <p class="testimonials__name">Meena Devi</p>
+                        <p class="testimonials__location">Chapra</p>
+                    </article>
+                    <article class="c-card testimonials__card">
+                        <div class="testimonials__stars" aria-hidden="true">★★★★★</div>
+                        <blockquote class="testimonials__quote">"Best urology clinic in Siwan. Modern equipment, clean facility, and Dr. Ankit Raj is very experienced. Got my kidney stone treatment done with laser &amp; completely painless."</blockquote>
+                        <p class="testimonials__name">Anil Sharma</p>
+                        <p class="testimonials__location">Siwan</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq l-section l-section--alt" aria-labelledby="faq-heading">
+            <div class="l-container">
+                <header class="c-section-heading">
+                    <span class="c-badge u-mb-4">
+                        <span class="material-symbols-outlined" aria-hidden="true">help</span>
+                        FAQ
+                    </span>
+                    <h2 class="c-section-heading__title" id="faq-heading">Frequently Asked Questions</h2>
+                    <p class="c-section-heading__subtitle">For any queries regarding the procedure, go through this FAQ section.</p>
+                </header>
+                <div class="faq__list" role="list">
+                    <details class="faq__item" role="listitem">
+                        <summary class="faq__question">What are common urological problems?<span class="material-symbols-outlined faq__chevron" aria-hidden="true">expand_more</span></summary>
+                        <div class="faq__answer">
+                            <p>Common urological problems include kidney stones, urinary tract infections (UTIs), benign prostatic hyperplasia (BPH), prostate issues, bladder conditions, and conditions requiring minimally invasive or laser surgery. Our team at JanakUROCare diagnoses and treats a wide range of urological conditions.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item" role="listitem">
+                        <summary class="faq__question">When should I consult a urologist?<span class="material-symbols-outlined faq__chevron" aria-hidden="true">expand_more</span></summary>
+                        <div class="faq__answer">
+                            <p>You should consult a urologist if you experience persistent urinary symptoms (pain, frequency, urgency, blood in urine), kidney or flank pain, difficulty urinating, erectile or fertility concerns, or if your doctor recommends a specialist. Early consultation can help in accurate diagnosis and timely treatment.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item" role="listitem">
+                        <summary class="faq__question">Is laser surgery painful?<span class="material-symbols-outlined faq__chevron" aria-hidden="true">expand_more</span></summary>
+                        <div class="faq__answer">
+                            <p>Laser surgery at JanakUROCare is typically minimally invasive and performed under appropriate anaesthesia. Most patients experience minimal pain during the procedure and a relatively quick recovery with less discomfort compared to traditional open surgery. Pain management is provided as needed.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item" role="listitem">
+                        <summary class="faq__question">What is the recovery time after laser stone surgery?<span class="material-symbols-outlined faq__chevron" aria-hidden="true">expand_more</span></summary>
+                        <div class="faq__answer">
+                            <p>Recovery time depends on the type of procedure. Many patients undergoing RIRS or similar laser stone surgery are discharged within a day or two and can resume light activities soon after. Your doctor will give you specific instructions based on your procedure and overall health.</p>
+                        </div>
+                    </details>
+                    <details class="faq__item" role="listitem">
+                        <summary class="faq__question">Does Janak UroCare accept insurance?<span class="material-symbols-outlined faq__chevron" aria-hidden="true">expand_more</span></summary>
+                        <div class="faq__answer">
+                            <p>JanakUROCare works with various insurance and payment options. Please contact our clinic with your insurance details to confirm coverage for your consultation and procedures. Our staff will assist you with billing and claim-related queries.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site footer -->
+    <footer class="c-footer" role="contentinfo">
+        <div class="c-footer__inner l-container">
+            <nav class="c-footer__nav" aria-label="Footer navigation">
+                <ul class="c-footer__links">
+                    <li><a href="/" class="c-footer__link">Home</a></li>
+                    <li><a href="male-sexual.html" class="c-footer__link">Male Sexual</a></li>
+                    <li><a href="laser-surgery.html" class="c-footer__link">Laser Surgery</a></li>
+                    <li><a href="about.html" class="c-footer__link">About us</a></li>
+                    <li><a href="contact.html" class="c-footer__link">Contact us</a></li>
+                    <li><a href="privacy-policy.html" class="c-footer__link">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="c-footer__link">Terms &amp; Conditions</a></li>
+                </ul>
+            </nav>            
+            <p class="c-footer__copyright">© 2026, JanakUROCare. All rights reserved.</p>
+           
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

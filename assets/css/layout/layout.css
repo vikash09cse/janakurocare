@@ -1,0 +1,183 @@
+/**
+ * Layout — container, sections, grid (production)
+ */
+/* =================================================
+   CONTAINER — responsive + safe area
+   ================================================= */
+
+.l-container {
+  width: 100%;
+  max-width: var(--container-xxl, 90rem);
+  margin-inline: auto;
+  padding-inline: max(clamp(1rem, 4vw, var(--page-margin)), var(--safe-area-left)) max(clamp(1rem, 4vw, var(--page-margin)), var(--safe-area-right));
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .l-container {
+    max-width: var(--container-sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .l-container {
+    max-width: var(--container-md);
+  }
+}
+
+@media (min-width: 992px) {
+  .l-container {
+    max-width: var(--container-lg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .l-container {
+    max-width: var(--container-xl);
+  }
+}
+
+@media (min-width: 1440px) {
+  .l-container {
+    max-width: var(--container-xxl);
+  }
+}
+
+/* =================================================
+   SECTIONS — responsive padding
+   ================================================= */
+
+.l-section {
+  padding-block: var(--space-section-block);
+  padding-top: max(var(--space-section-block), var(--safe-area-top));
+  padding-bottom: max(var(--space-section-block), var(--safe-area-bottom));
+}
+
+.l-section--sm {
+  padding-block: clamp(var(--space-4), 4vw, var(--space-5));
+}
+
+.l-section--lg {
+  padding-block: clamp(var(--space-6), 6vw, var(--space-7));
+}
+
+/* Section variants — clear visual differentiation */
+.l-section--white {
+  background: var(--section-bg);
+}
+
+.l-section--alt {
+  background: var(--section-bg-alt);
+}
+
+.l-section--tint {
+  background: var(--section-bg-tint);
+}
+
+.l-section--bordered {
+  border-top: 1px solid var(--section-border);
+  border-bottom: 1px solid var(--section-border);
+}
+
+/* Anchor scroll offset for fixed header */
+.l-section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+/* =================================================
+   GRID — responsive columns
+   ================================================= */
+
+.l-grid {
+  --grid-cols: 1;
+  --grid-gap: var(--space-5);
+
+  display: grid;
+  grid-template-columns: repeat(var(--grid-cols), minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Base: 1 column on small screens */
+.l-grid--2,
+.l-grid--3,
+.l-grid--4,
+.l-grid--5,
+.l-grid--6 {
+  --grid-cols: 1;
+}
+
+/* Tablet: 2 cols for 2-col grid; 2 cols for 3/4-col grids */
+@media (min-width: 768px) {
+  .l-grid--2 {
+    --grid-cols: 2;
+  }
+  .l-grid--3,
+  .l-grid--4 {
+    --grid-cols: 2;
+  }
+}
+
+/* Desktop: full column count */
+@media (min-width: 992px) {
+  .l-grid--3 {
+    --grid-cols: 3;
+  }
+  .l-grid--4 {
+    --grid-cols: 4;
+  }
+  .l-grid--5 {
+    --grid-cols: 5;
+  }
+  .l-grid--6 {
+    --grid-cols: 6;
+  }
+}
+
+/* Profile / media card: image + content */
+.l-grid--profile {
+  --grid-cols: 1;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .l-grid--profile {
+    grid-template-columns: minmax(280px, 320px) 1fr;
+    min-height: 380px;
+  }
+}
+
+/* =================================================
+   FLEX
+   ================================================= */
+
+.l-flex {
+  display: flex;
+  gap: var(--space-3, 1rem);
+}
+
+.l-flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.l-flex--between {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l-flex--column {
+  flex-direction: column;
+}
+
+/* =================================================
+   STACK
+   ================================================= */
+
+.l-stack > * + * {
+  margin-top: var(--space-4);
+}
+
+.l-wrapper {
+  width: 100%;
+  margin-inline: auto;
+}
