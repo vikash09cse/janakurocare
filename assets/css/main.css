@@ -24,6 +24,16 @@ main {
   color: inherit;
 }
 
+::selection {
+  background: rgba(31, 89, 156, 0.15);
+  color: inherit;
+}
+
+::selection {
+  background: rgba(31, 89, 156, 0.15);
+  color: inherit;
+}
+
 /* =================================================
    PAGE: HOME — hero, stats, specialists, services, testimonials, faq
    ================================================= */
@@ -75,7 +85,7 @@ main {
   font-size: clamp(var(--font-size-300), 2vw, var(--font-size-400));
   color: var(--color-text);
   margin-bottom: var(--space-stack-lg);
-  max-width: 48ch;
+  max-width: 65rem;
 }
 
 .hero__actions .c-button {
@@ -90,13 +100,13 @@ main {
 }
 
 .hero__image {
-  min-height: 200px;
+  /* min-height: 12.5rem; */
   border-radius: var(--radius-md);
 }
 
 @media (max-width: 767px) {
   .hero__image {
-    min-height: 180px;
+    /* min-height: 11.25rem; */
     order: -1;
   }
 
@@ -321,14 +331,14 @@ main {
   left: 0;
   top: 0;
   bottom: 0;
-  width: 4px;
+  width: 0.25rem;
   background: var(--color-dominant);
   border-radius: var(--radius-md) 0 0 var(--radius-md);
 }
 
 .about-intro__box:hover {
   border-color: var(--color-dominant-light);
-  box-shadow: 0 4px 12px rgba(31, 89, 156, 0.08);
+  box-shadow: 0 0.25rem 0.75rem rgba(31, 89, 156, 0.08);
 }
 
 .about-intro__icon {
@@ -413,7 +423,7 @@ main {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
   gap: var(--space-4);
   margin-inline: auto;
 }
@@ -434,7 +444,7 @@ main {
 
 .expertise-section__item:hover {
   border-color: var(--color-dominant-light);
-  box-shadow: 0 2px 8px rgba(31, 89, 156, 0.06);
+  box-shadow: 0 0.125rem 0.5rem rgba(31, 89, 156, 0.06);
 }
 
 .expertise-section__icon {
@@ -484,7 +494,7 @@ main {
 
 .about-cards__card:hover {
   border-color: var(--color-dominant-light);
-  box-shadow: 0 4px 16px rgba(31, 89, 156, 0.08);
+  box-shadow: 0 0.25rem 1rem rgba(31, 89, 156, 0.08);
 }
 
 .about-cards__header {
@@ -621,13 +631,13 @@ main {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: var(--color-bg);
-  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 0.125rem 0.75rem rgba(15, 23, 42, 0.06);
   transition: border-color var(--transition-fast), box-shadow var(--transition-normal);
 }
 
 .contact-section__card.c-card:hover {
   border-color: var(--color-dominant-light);
-  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 0.375rem 1.5rem rgba(15, 23, 42, 0.08);
 }
 
 /* Form card */
@@ -701,13 +711,13 @@ main {
 .contact-form__input:focus {
   outline: none;
   border-color: var(--color-dominant);
-  box-shadow: 0 0 0 3px rgba(31, 89, 156, 0.12);
+  box-shadow: 0 0 0 0.1875rem rgba(31, 89, 156, 0.12);
 }
 
 .contact-form__input:focus-visible {
   outline: none;
   border-color: var(--color-dominant);
-  box-shadow: 0 0 0 3px rgba(31, 89, 156, 0.12);
+  box-shadow: 0 0 0 0.1875rem rgba(31, 89, 156, 0.12);
 }
 
 .contact-form__select {
@@ -937,13 +947,13 @@ main {
 
 @media (min-width: 768px) {
   .specialists .l-grid--profile {
-    grid-template-columns: minmax(280px, 420px) 1fr;
+    grid-template-columns: minmax(17.5rem, 26.25rem) 1fr;
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .specialists .l-grid--profile {
-    grid-template-columns: minmax(260px, 320px) 1fr;
+    grid-template-columns: minmax(16.25rem, 20rem) 1fr;
   }
 }
 
@@ -981,8 +991,8 @@ main {
 .services-women__card-image {
   position: relative;
   aspect-ratio: 16 / 10;
-  max-height: 160px;
-  min-height: 120px;
+  max-height: 10rem;
+  min-height: 7.5rem;
   flex-shrink: 0;
   /* background: linear-gradient(135deg, var(--color-dominant-light) 0%, var(--color-surface) 100%); */
   overflow: hidden;
@@ -1064,8 +1074,8 @@ main {
 
   .services-men__card-image,
   .services-women__card-image {
-    width: 140px;
-    min-width: 140px;
+    width: 8.75rem;
+    min-width: 8.75rem;
     max-height: none;
     min-height: 0;
     aspect-ratio: 1;
@@ -1088,8 +1098,8 @@ main {
 @media (min-width: 992px) {
   .services-men__card-image,
   .services-women__card-image {
-    width: 260px;
-    min-width: 260px;
+    width: 16.25rem;
+    min-width: 16.25rem;
   }
 }
 
@@ -1258,7 +1268,7 @@ main {
   border: var(--border-width-1) solid var(--color-border);
   border-radius: var(--radius-md);
   padding: var(--space-6) var(--space-6) var(--space-7);
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 0.0625rem 0.1875rem rgba(15, 23, 42, 0.06);
 }
 
 .terms-content .term__block {

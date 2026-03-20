@@ -11,10 +11,10 @@
 /* Visually hidden but available to screen readers */
 .u-sr-only {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
   padding: 0;
-  margin: -1px;
+  margin: -0.0625rem;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   clip-path: inset(50%);
@@ -35,12 +35,13 @@
   text-decoration: none;
   transform: translateY(-100%);
   transition: transform var(--transition-fast);
+  opacity: 0;
 }
 .u-skip-link:focus,
 .u-skip-link:focus-visible {
   transform: translateY(0);
-  outline: 2px solid var(--color-dominant);
-  outline-offset: 2px;
+  outline: 0.125rem solid var(--color-dominant);
+  outline-offset: 0.125rem;
 }
 
 .u-flex-center {

@@ -50,8 +50,8 @@
     --color-accent-raw: #f29c2f;
 
     /* Focus ring — WCAG 2.4.7, 3.2.1 */
-    --focus-ring: 2px solid var(--color-dominant);
-    --focus-ring-offset: 2px;
+    --focus-ring: 0.125rem solid var(--color-dominant);
+    --focus-ring-offset: 0.125rem;
 
     /* Text hierarchy — WCAG 2.1 AA, calm readable tones */
     --color-heading: #0c1929;
@@ -79,9 +79,9 @@
     --color-star: #eab308;
 
     /*  SHADOWS — soft, healthcare-appropriate (blue tint) */
-    --shadow-sm: 0 1px 3px rgba(31, 89, 156, 0.06);
-    --shadow-md: 0 4px 12px rgba(31, 89, 156, 0.08), 0 2px 4px rgba(31, 89, 156, 0.04);
-    --shadow-lg: 0 10px 24px rgba(31, 89, 156, 0.1), 0 4px 8px rgba(31, 89, 156, 0.05);
+    --shadow-sm: 0 0.0625rem 0.1875rem rgba(31, 89, 156, 0.06);
+    --shadow-md: 0 0.25rem 0.75rem rgba(31, 89, 156, 0.08), 0 0.125rem 0.25rem rgba(31, 89, 156, 0.04);
+    --shadow-lg: 0 0.625rem 1.5rem rgba(31, 89, 156, 0.1), 0 0.25rem 0.5rem rgba(31, 89, 156, 0.05);
 
     /*  TRANSITIONS  */
 
@@ -181,9 +181,9 @@
     --btn-height: 2.75rem;
     --btn-padding-y: 0.75rem;
     --btn-padding-x: 1.5rem;
-    --btn-shadow: 0 1px 3px rgba(31, 89, 156, 0.1);
-    --btn-shadow-hover: 0 4px 14px rgba(31, 89, 156, 0.15);
-    --btn-shadow-active: 0 0 0 1px rgba(31, 89, 156, 0.2) inset; 
+    --btn-shadow: 0 0.0625rem 0.1875rem rgba(31, 89, 156, 0.1);
+    --btn-shadow-hover: 0 0.25rem 0.875rem rgba(31, 89, 156, 0.15);
+    --btn-shadow-active: 0 0 0 0.0625rem rgba(31, 89, 156, 0.2) inset; 
 
     /* CARD */
 
@@ -208,7 +208,7 @@
     --radius-lg: 0.5rem;     /* 8px */
     --radius-xl: 0.75rem;    /* 12px */
     --radius-2xl: 1rem;      /* 16px */
-    --radius-full: 9999px;
+    --radius-full: 9999rem;
 
     /*  Responsive / app-like  */
 

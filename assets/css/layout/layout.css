@@ -141,8 +141,8 @@
 
 @media (min-width: 768px) {
   .l-grid--profile {
-    grid-template-columns: minmax(280px, 320px) 1fr;
-    min-height: 380px;
+    grid-template-columns: minmax(17.5rem, 20rem) 1fr;
+    min-height: 23.75rem;
   }
 }
 
