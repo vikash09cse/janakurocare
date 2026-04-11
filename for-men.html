@@ -19,6 +19,8 @@
 <body>
     <a href="#main-content" class="u-skip-link">Skip to main content</a>
 
+
+    <!-- Site header -->
     <header class="c-header">
         <div class="l-container">
             <div class="c-header__wrapper u-flex-between">
@@ -29,34 +31,44 @@
                 </div>
                 <nav class="c-header__nav" aria-label="Primary Navigation">
                     <ul class="c-header__menu">
-                        <li class="c-header__item">
+                        <li class="c-header__item is-active">
                             <a href="index.html" class="c-header__link">Home</a>
                         </li>
                         <!-- <li class="c-header__item">
                             <a href="male-sexual.html" class="c-header__link">Male Sexual</a>
                         </li> -->
-                        <li class="c-header__item c-header__item--has-submenu is-active">
-                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false"
-                                aria-haspopup="true" aria-controls="header-services-menu">
-                                Services
-                                <span class="material-symbols-outlined c-header__arrow"
-                                    aria-hidden="true">expand_more</span>
+                        <li class="c-header__item c-header__item--has-submenu">
+                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu-men">
+                                For Men
+                                <span class="material-symbols-outlined c-header__arrow" aria-hidden="true">expand_more</span>
                             </button>
-                            <ul class="c-header__submenu" id="header-services-menu" role="menu">
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="for-men.html" class="c-header__submenu-link" role="menuitem">For Men</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="for-women.html" class="c-header__submenu-link" role="menuitem">For
-                                        Women</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="general-urology.html" class="c-header__submenu-link"
-                                        role="menuitem">General Urology</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="patient.html" class="c-header__submenu-link" role="menuitem">Patient</a>
-                                </li>
+                            <ul class="c-header__submenu" id="header-services-menu-men" role="menu">
+                                <li><a href="men/kidney-stones.html" class="c-header__submenu-link">Kidney Stones</a></li>
+                        <li><a href="men/prostate-enlargement-bph.html" class="c-header__submenu-link">Prostate Enlargement</a></li>
+                        <li><a href="men/uti.html" class="c-header__submenu-link">Urinary Tract Infection</a></li>
+                        <li><a href="men/blood-in-urine.html" class="c-header__submenu-link">Blood in Urine</a></li>
+                        <li><a href="men/urethral-stricture.html" class="c-header__submenu-link">Urethral Stricture</a></li>
+                        <li><a href="men/hydrocele-varicocele.html" class="c-header__submenu-link">Hydrocele & Varicocele</a></li>
+                        <li><a href="men/testicular-pain.html" class="c-header__submenu-link">Testicular Pain or Swelling </a></li>
+                        <li><a href="men/urinary-retention.html" class="c-header__submenu-link">Urinary Retention</a></li>
+                        <li><a href="men/male-infertility.html" class="c-header__submenu-link">Male Infertility Evaluation</a></li>
+                            </ul>
+                        </li>
+                        <li class="c-header__item c-header__item--has-submenu">
+                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu-women">
+                                For Women
+                                <span class="material-symbols-outlined c-header__arrow" aria-hidden="true">expand_more</span>
+                            </button>
+                            <ul class="c-header__submenu" id="header-services-menu-women" role="menu">
+                               <li><a href="women/uti.html" class="c-header__submenu-link">Urinary Tract Infection</a></li>
+                        <li><a href="women/frequent-urination.html" class="c-header__submenu-link">Frequent Urination</a></li>
+                        <li><a href="women/urine-leakage.html" class="c-header__submenu-link">Urine Leakage</a></li>
+                        <li><a href="women/burning-urination.html" class="c-header__submenu-link">Burning Urination</a></li>
+                        <li><a href="women/blood-in-urine.html" class="c-header__submenu-link">Blood in Urine  </a></li>
+                        <li><a href="women/overactive-bladder.html" class="c-header__submenu-link">Overactive Bladder </a></li>
+                        <li><a href="women/bladder-control.html" class="c-header__submenu-link">Bladder Control Problems</a></li>
+                        <li><a href="women/kidney-stones.html" class="c-header__submenu-link">Kidney Stones</a></li>
+                        <li><a href="women/urinary-retention.html" class="c-header__submenu-link">Urinary Retention</a></li>
                             </ul>
                         </li>
                         <li class="c-header__item">
@@ -77,14 +89,14 @@
                         Book Appointment
                     </a>
                 </nav>
-                <button type="button" class="c-header__toggle" id="menuToggle" aria-expanded="false"
-                    aria-controls="mobileDrawer" aria-label="Open menu">
+                <button type="button" class="c-header__toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileDrawer" aria-label="Open menu">
                     <span class="material-symbols-outlined" aria-hidden="true">menu</span>
                 </button>
             </div>
         </div>
     </header>
 
+    <!-- Mobile navigation drawer -->
     <div class="c-drawer__overlay" id="overlay" aria-hidden="true"></div>
     <div class="c-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile menu" aria-hidden="true">
         <div class="c-drawer__header">
@@ -95,23 +107,42 @@
         </div>
         <nav class="c-drawer__nav" aria-label="Mobile Navigation">
             <ul class="c-drawer__menu">
-                <li class="c-drawer__item">
+                <li class="c-drawer__item is-active">
                     <a href="index.html" class="c-drawer__link">Home</a>
                 </li>
-                <!-- <li class="c-drawer__item">
-                    <a href="male-sexual.html" class="c-drawer__link">Male Sexual</a>
-                </li> -->
-                <li class="c-drawer__item c-drawer__item--submenu is-active">
-                    <button type="button" class="c-drawer__toggle" aria-expanded="false"
-                        aria-controls="drawer-services-menu">
-                        Services
+                
+                <li class="c-drawer__item c-drawer__item--submenu">
+                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu-men">
+                        For Men
                         <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
                     </button>
-                    <ul class="c-drawer__submenu" id="drawer-services-menu">
-                        <li><a href="for-men.html" class="c-drawer__link">For Men</a></li>
-                        <li><a href="for-women.html" class="c-drawer__link">For Women</a></li>
-                        <li><a href="general-urology.html" class="c-drawer__link">General Urology</a></li>
-                        <li><a href="patient.html" class="c-drawer__link">Patient</a></li>
+                    <ul class="c-drawer__submenu" id="drawer-services-menu-men">
+                        <li><a href="men/kidney-stones.html" class="c-drawer__link">Kidney Stones</a></li>
+                        <li><a href="men/prostate-enlargement-bph.html" class="c-drawer__link">Prostate Enlargement</a></li>
+                        <li><a href="men/uti.html" class="c-drawer__link">Urinary Tract Infection</a></li>
+                        <li><a href="men/blood-in-urine.html" class="c-drawer__link">Blood in Urine</a></li>
+                        <li><a href="men/urethral-stricture.html" class="c-drawer__link">Urethral Stricture</a></li>
+                        <li><a href="men/hydrocele-varicocele.html" class="c-drawer__link">Hydrocele & Varicocele</a></li>
+                        <li><a href="men/testicular-pain.html" class="c-drawer__link">Testicular Pain or Swelling </a></li>
+                        <li><a href="men/urinary-retention.html" class="c-drawer__link">Urinary Retention</a></li>
+                        <li><a href="men/male-infertility.html" class="c-drawer__link">Male Infertility Evaluation</a></li>
+                    </ul>
+                </li>
+                <li class="c-drawer__item c-drawer__item--submenu">
+                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu-women">
+                        For Women
+                        <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="c-drawer__submenu" id="drawer-services-menu-women">
+                        <li><a href="women/uti.html" class="c-drawer__link">Urinary Tract Infection</a></li>
+                        <li><a href="women/frequent-urination.html" class="c-drawer__link">Frequent Urination</a></li>
+                        <li><a href="women/urine-leakage.html" class="c-drawer__link">Urine Leakage</a></li>
+                        <li><a href="women/burning-urination.html" class="c-drawer__link">Burning Urination</a></li>
+                        <li><a href="women/blood-in-urine.html" class="c-drawer__link">Blood in Urine  </a></li>
+                        <li><a href="women/overactive-bladder.html" class="c-drawer__link">Overactive Bladder </a></li>
+                        <li><a href="women/bladder-control.html" class="c-drawer__link">Bladder Control Problems</a></li>
+                        <li><a href="women/kidney-stones.html" class="c-drawer__link">Kidney Stones</a></li>
+                        <li><a href="women/urinary-retention.html" class="c-drawer__link">Urinary Retention</a></li>
                     </ul>
                 </li>
                 <li class="c-drawer__item">
@@ -134,23 +165,23 @@
         </nav>
     </div>
 
+
     <main id="main-content" class="for-men-page">
         <section id="hero" class="l-section inner-page-hero" aria-labelledby="hero-title">
             <div class="l-container">
                 <div class="hero__content">
                     <span class="c-badge u-mb-4">
                         <span class="material-symbols-outlined" aria-hidden="true">male</span>
-                        Male Urology Services
+                        Services For Men · Advanced Urology. Trusted Care.
                     </span>
                     <h1 class="hero__title" id="hero-title">
-                        Comprehensive Male Urological Care in Siwan
+                        Comprehensive care for men
                     </h1>
                     <p class="hero__description">
-                        Expert diagnosis and minimally invasive treatment for all male urological conditions — from
-                        kidney stones to prostate cancer — by Dr. Ankit Raj.
+                        We provide comprehensive care for common urological conditions affecting men. Janak Uro Care, Siwan, Bihar — clear explanations, modern treatment, and follow-up you can trust.
                     </p>
                     <div class="hero__actions">
-                        <a href="contact.html" class="c-button c-button--primary">Book Appointment</a>
+                        <a href="contact.html" class="c-button c-button--primary">Book Your Appointment Now &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -177,7 +208,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">diamond</span>
                         </div>
-                        <h3 class="laser-procedures__title">Kidney Stones</h3>
+                        <h3 class="laser-procedures__title"><a href="men/kidney-stones.html">Kidney Stones</a></h3>
                         <p class="laser-procedures__description">Kidney stones are hard mineral deposits that cause
                             intense flank pain and urinary blockage. We offer painless laser removal (RIRS/PCNL) with
                             same-day or next-day discharge.</p>
@@ -187,7 +218,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">elderly_man</span>
                         </div>
-                        <h3 class="laser-procedures__title">Prostate Enlargement (BPH)</h3>
+                        <h3 class="laser-procedures__title"><a href="men/prostate-enlargement-bph.html">Prostate Enlargement (BPH)</a></h3>
                         <p class="laser-procedures__description">Benign Prostatic Hyperplasia (BPH) causes urinary
                             slowness and frequent nighttime urination in men over 50. We offer HoLEP laser surgery,
                             Urolift, Rezum, and Aquablation for lasting relief.</p>
@@ -197,7 +228,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">biotech</span>
                         </div>
-                        <h3 class="laser-procedures__title">Prostate Cancer</h3>
+                        <h3 class="laser-procedures__title"><a href="general-urology.html">Prostate Cancer</a></h3>
                         <p class="laser-procedures__description">Prostate cancer is highly treatable when detected early
                             and our team uses the latest minimally invasive techniques. We offer HIFU, Nanoknife, and
                             laparoscopic surgery for organ-sparing treatment.</p>
@@ -207,7 +238,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">water_drop</span>
                         </div>
-                        <h3 class="laser-procedures__title">Bladder Cancer</h3>
+                        <h3 class="laser-procedures__title"><a href="general-urology.html">Bladder Cancer</a></h3>
                         <p class="laser-procedures__description">Bladder cancer often presents as painless blood in
                             urine and requires prompt evaluation. We perform cystoscopy, TURBT, and laparoscopic radical
                             cystectomy for comprehensive management.</p>
@@ -217,7 +248,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">hub</span>
                         </div>
-                        <h3 class="laser-procedures__title">Kidney Cancer</h3>
+                        <h3 class="laser-procedures__title"><a href="general-urology.html">Kidney Cancer</a></h3>
                         <p class="laser-procedures__description">Kidney cancer is often discovered incidentally on scans
                             and is very treatable at early stages. We offer laparoscopic partial or radical nephrectomy
                             with faster recovery and minimal scarring.</p>
@@ -227,7 +258,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">child_care</span>
                         </div>
-                        <h3 class="laser-procedures__title">Male Infertility</h3>
+                        <h3 class="laser-procedures__title"><a href="men/male-infertility.html">Male Infertility</a></h3>
                         <p class="laser-procedures__description">Male infertility is commonly caused by varicocele,
                             hormonal imbalance, or ductal blockages. We perform varicocelectomy, sperm retrieval, and
                             provide a full fertility-focused evaluation.</p>
@@ -237,7 +268,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">favorite</span>
                         </div>
-                        <h3 class="laser-procedures__title">Erectile Dysfunction</h3>
+                        <h3 class="laser-procedures__title"><a href="male-sexual.html">Erectile Dysfunction</a></h3>
                         <p class="laser-procedures__description">Erectile dysfunction affects men of all ages and can
                             signal underlying vascular or hormonal issues. We provide confidential, personalised medical
                             or surgical treatment plans.</p>
@@ -247,7 +278,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">local_hospital</span>
                         </div>
-                        <h3 class="laser-procedures__title">Urinary Tract Infection (UTI)</h3>
+                        <h3 class="laser-procedures__title"><a href="men/uti.html">Urinary Tract Infection (UTI)</a></h3>
                         <p class="laser-procedures__description">UTIs in men are less common but require thorough
                             investigation to rule out structural causes. We diagnose and treat recurrent UTIs with
                             targeted therapy and full urological assessment.</p>
@@ -257,7 +288,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">opacity</span>
                         </div>
-                        <h3 class="laser-procedures__title">Hematuria (Blood in Urine)</h3>
+                        <h3 class="laser-procedures__title"><a href="men/blood-in-urine.html">Hematuria (Blood in Urine)</a></h3>
                         <p class="laser-procedures__description">Blood in urine is a warning sign that should never be
                             ignored, even when painless. We perform urine cytology, ultrasound, and cystoscopy to find
                             and treat the underlying cause.</p>
@@ -268,7 +299,7 @@
                         <div class="laser-procedures__icon" aria-hidden="true">
                             <span class="material-symbols-outlined">pediatrics</span>
                         </div>
-                        <h3 class="laser-procedures__title">Pediatric Urology Problems</h3>
+                        <h3 class="laser-procedures__title"><a href="contact.html">Pediatric Urology Problems</a></h3>
                         <p class="laser-procedures__description">Children can suffer from undescended testes,
                             hypospadias, hydronephrosis, and recurrent UTIs. Our team provides gentle, child-friendly
                             surgical and non-surgical urological care.</p>

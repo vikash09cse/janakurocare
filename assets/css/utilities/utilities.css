@@ -50,6 +50,13 @@
   justify-content: center;
 }
 
+.u-align-center{
+ justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: var(--space-content-top);
+    padding: var(--space-2);
+}
 .u-flex-between {
   display: flex;
   align-items: center;

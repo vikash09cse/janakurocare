@@ -17,6 +17,8 @@
 <body>
     <a href="#main-content" class="u-skip-link">Skip to main content</a>
 
+
+    <!-- Site header -->
     <header class="c-header">
         <div class="l-container">
             <div class="c-header__wrapper u-flex-between">
@@ -27,30 +29,44 @@
                 </div>
                 <nav class="c-header__nav" aria-label="Primary Navigation">
                     <ul class="c-header__menu">
-                        <li class="c-header__item">
+                        <li class="c-header__item is-active">
                             <a href="index.html" class="c-header__link">Home</a>
                         </li>
                         <!-- <li class="c-header__item">
                             <a href="male-sexual.html" class="c-header__link">Male Sexual</a>
                         </li> -->
                         <li class="c-header__item c-header__item--has-submenu">
-                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu">
-                                Services
+                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu-men">
+                                For Men
                                 <span class="material-symbols-outlined c-header__arrow" aria-hidden="true">expand_more</span>
                             </button>
-                            <ul class="c-header__submenu" id="header-services-menu" role="menu">
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="for-men.html" class="c-header__submenu-link" role="menuitem">For Men</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="for-women.html" class="c-header__submenu-link" role="menuitem">For Women</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="general-urology.html" class="c-header__submenu-link" role="menuitem">General Urology</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="patient.html" class="c-header__submenu-link" role="menuitem">Patient</a>
-                                </li>
+                            <ul class="c-header__submenu" id="header-services-menu-men" role="menu">
+                                <li><a href="men/kidney-stones.html" class="c-header__submenu-link">Kidney Stones</a></li>
+                        <li><a href="men/prostate-enlargement-bph.html" class="c-header__submenu-link">Prostate Enlargement</a></li>
+                        <li><a href="men/uti.html" class="c-header__submenu-link">Urinary Tract Infection</a></li>
+                        <li><a href="men/blood-in-urine.html" class="c-header__submenu-link">Blood in Urine</a></li>
+                        <li><a href="men/urethral-stricture.html" class="c-header__submenu-link">Urethral Stricture</a></li>
+                        <li><a href="men/hydrocele-varicocele.html" class="c-header__submenu-link">Hydrocele & Varicocele</a></li>
+                        <li><a href="men/testicular-pain.html" class="c-header__submenu-link">Testicular Pain or Swelling </a></li>
+                        <li><a href="men/urinary-retention.html" class="c-header__submenu-link">Urinary Retention</a></li>
+                        <li><a href="men/male-infertility.html" class="c-header__submenu-link">Male Infertility Evaluation</a></li>
+                            </ul>
+                        </li>
+                        <li class="c-header__item c-header__item--has-submenu">
+                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu-women">
+                                For Women
+                                <span class="material-symbols-outlined c-header__arrow" aria-hidden="true">expand_more</span>
+                            </button>
+                            <ul class="c-header__submenu" id="header-services-menu-women" role="menu">
+                               <li><a href="women/uti.html" class="c-header__submenu-link">Urinary Tract Infection</a></li>
+                        <li><a href="women/frequent-urination.html" class="c-header__submenu-link">Frequent Urination</a></li>
+                        <li><a href="women/urine-leakage.html" class="c-header__submenu-link">Urine Leakage</a></li>
+                        <li><a href="women/burning-urination.html" class="c-header__submenu-link">Burning Urination</a></li>
+                        <li><a href="women/blood-in-urine.html" class="c-header__submenu-link">Blood in Urine  </a></li>
+                        <li><a href="women/overactive-bladder.html" class="c-header__submenu-link">Overactive Bladder </a></li>
+                        <li><a href="women/bladder-control.html" class="c-header__submenu-link">Bladder Control Problems</a></li>
+                        <li><a href="women/kidney-stones.html" class="c-header__submenu-link">Kidney Stones</a></li>
+                        <li><a href="women/urinary-retention.html" class="c-header__submenu-link">Urinary Retention</a></li>
                             </ul>
                         </li>
                         <li class="c-header__item">
@@ -59,7 +75,7 @@
                         <li class="c-header__item">
                             <a href="about.html" class="c-header__link">About</a>
                         </li>
-                        <li class="c-header__item is-active">
+                        <li class="c-header__item">
                             <a href="blog.html" class="c-header__link">Blog</a>
                         </li>
                         <li class="c-header__item">
@@ -78,6 +94,7 @@
         </div>
     </header>
 
+    <!-- Mobile navigation drawer -->
     <div class="c-drawer__overlay" id="overlay" aria-hidden="true"></div>
     <div class="c-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile menu" aria-hidden="true">
         <div class="c-drawer__header">
@@ -88,22 +105,42 @@
         </div>
         <nav class="c-drawer__nav" aria-label="Mobile Navigation">
             <ul class="c-drawer__menu">
-                <li class="c-drawer__item">
+                <li class="c-drawer__item is-active">
                     <a href="index.html" class="c-drawer__link">Home</a>
                 </li>
-                <!-- <li class="c-drawer__item">
-                    <a href="male-sexual.html" class="c-drawer__link">Male Sexual</a>
-                </li> -->
+                
                 <li class="c-drawer__item c-drawer__item--submenu">
-                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu">
-                        Services
+                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu-men">
+                        For Men
                         <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
                     </button>
-                    <ul class="c-drawer__submenu" id="drawer-services-menu">
-                        <li><a href="for-men.html" class="c-drawer__link">For Men</a></li>
-                        <li><a href="for-women.html" class="c-drawer__link">For Women</a></li>
-                        <li><a href="general-urology.html" class="c-drawer__link">General Urology</a></li>
-                        <li><a href="patient.html" class="c-drawer__link">Patient</a></li>
+                    <ul class="c-drawer__submenu" id="drawer-services-menu-men">
+                        <li><a href="men/kidney-stones.html" class="c-drawer__link">Kidney Stones</a></li>
+                        <li><a href="men/prostate-enlargement-bph.html" class="c-drawer__link">Prostate Enlargement</a></li>
+                        <li><a href="men/uti.html" class="c-drawer__link">Urinary Tract Infection</a></li>
+                        <li><a href="men/blood-in-urine.html" class="c-drawer__link">Blood in Urine</a></li>
+                        <li><a href="men/urethral-stricture.html" class="c-drawer__link">Urethral Stricture</a></li>
+                        <li><a href="men/hydrocele-varicocele.html" class="c-drawer__link">Hydrocele & Varicocele</a></li>
+                        <li><a href="men/testicular-pain.html" class="c-drawer__link">Testicular Pain or Swelling </a></li>
+                        <li><a href="men/urinary-retention.html" class="c-drawer__link">Urinary Retention</a></li>
+                        <li><a href="men/male-infertility.html" class="c-drawer__link">Male Infertility Evaluation</a></li>
+                    </ul>
+                </li>
+                <li class="c-drawer__item c-drawer__item--submenu">
+                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu-women">
+                        For Women
+                        <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="c-drawer__submenu" id="drawer-services-menu-women">
+                        <li><a href="women/uti.html" class="c-drawer__link">Urinary Tract Infection</a></li>
+                        <li><a href="women/frequent-urination.html" class="c-drawer__link">Frequent Urination</a></li>
+                        <li><a href="women/urine-leakage.html" class="c-drawer__link">Urine Leakage</a></li>
+                        <li><a href="women/burning-urination.html" class="c-drawer__link">Burning Urination</a></li>
+                        <li><a href="women/blood-in-urine.html" class="c-drawer__link">Blood in Urine  </a></li>
+                        <li><a href="women/overactive-bladder.html" class="c-drawer__link">Overactive Bladder </a></li>
+                        <li><a href="women/bladder-control.html" class="c-drawer__link">Bladder Control Problems</a></li>
+                        <li><a href="women/kidney-stones.html" class="c-drawer__link">Kidney Stones</a></li>
+                        <li><a href="women/urinary-retention.html" class="c-drawer__link">Urinary Retention</a></li>
                     </ul>
                 </li>
                 <li class="c-drawer__item">
@@ -112,7 +149,7 @@
                 <li class="c-drawer__item">
                     <a href="about.html" class="c-drawer__link">About</a>
                 </li>
-                <li class="c-drawer__item is-active">
+                <li class="c-drawer__item">
                     <a href="blog.html" class="c-drawer__link">Blog</a>
                 </li>
                 <li class="c-drawer__item">
@@ -126,8 +163,9 @@
         </nav>
     </div>
 
+
     <main id="main-content">
-        <section id="hero" class="l-section inner-page-hero" aria-labelledby="hero-title">
+        <section id="hero" class="l-section inner-page-hero inner-page-hero--condition" aria-labelledby="hero-title">
             <div class="l-container">
                 <div class="hero__content">
                     <span class="c-badge u-mb-4">

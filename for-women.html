@@ -17,6 +17,8 @@
 <body>
     <a href="#main-content" class="u-skip-link">Skip to main content</a>
 
+
+    <!-- Site header -->
     <header class="c-header">
         <div class="l-container">
             <div class="c-header__wrapper u-flex-between">
@@ -27,30 +29,44 @@
                 </div>
                 <nav class="c-header__nav" aria-label="Primary Navigation">
                     <ul class="c-header__menu">
-                        <li class="c-header__item">
+                        <li class="c-header__item is-active">
                             <a href="index.html" class="c-header__link">Home</a>
                         </li>
                         <!-- <li class="c-header__item">
                             <a href="male-sexual.html" class="c-header__link">Male Sexual</a>
                         </li> -->
-                        <li class="c-header__item c-header__item--has-submenu is-active">
-                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu">
-                                Services
+                        <li class="c-header__item c-header__item--has-submenu">
+                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu-men">
+                                For Men
                                 <span class="material-symbols-outlined c-header__arrow" aria-hidden="true">expand_more</span>
                             </button>
-                            <ul class="c-header__submenu" id="header-services-menu" role="menu">
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="for-men.html" class="c-header__submenu-link" role="menuitem">For Men</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="for-women.html" class="c-header__submenu-link" role="menuitem">For Women</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="general-urology.html" class="c-header__submenu-link" role="menuitem">General Urology</a>
-                                </li>
-                                <li class="c-header__submenu-item" role="none">
-                                    <a href="patient.html" class="c-header__submenu-link" role="menuitem">Patient</a>
-                                </li>
+                            <ul class="c-header__submenu" id="header-services-menu-men" role="menu">
+                                <li><a href="men/kidney-stones.html" class="c-header__submenu-link">Kidney Stones</a></li>
+                        <li><a href="men/prostate-enlargement-bph.html" class="c-header__submenu-link">Prostate Enlargement</a></li>
+                        <li><a href="men/uti.html" class="c-header__submenu-link">Urinary Tract Infection</a></li>
+                        <li><a href="men/blood-in-urine.html" class="c-header__submenu-link">Blood in Urine</a></li>
+                        <li><a href="men/urethral-stricture.html" class="c-header__submenu-link">Urethral Stricture</a></li>
+                        <li><a href="men/hydrocele-varicocele.html" class="c-header__submenu-link">Hydrocele & Varicocele</a></li>
+                        <li><a href="men/testicular-pain.html" class="c-header__submenu-link">Testicular Pain or Swelling </a></li>
+                        <li><a href="men/urinary-retention.html" class="c-header__submenu-link">Urinary Retention</a></li>
+                        <li><a href="men/male-infertility.html" class="c-header__submenu-link">Male Infertility Evaluation</a></li>
+                            </ul>
+                        </li>
+                        <li class="c-header__item c-header__item--has-submenu">
+                            <button type="button" class="c-header__link c-header__submenu-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="header-services-menu-women">
+                                For Women
+                                <span class="material-symbols-outlined c-header__arrow" aria-hidden="true">expand_more</span>
+                            </button>
+                            <ul class="c-header__submenu" id="header-services-menu-women" role="menu">
+                               <li><a href="women/uti.html" class="c-header__submenu-link">Urinary Tract Infection</a></li>
+                        <li><a href="women/frequent-urination.html" class="c-header__submenu-link">Frequent Urination</a></li>
+                        <li><a href="women/urine-leakage.html" class="c-header__submenu-link">Urine Leakage</a></li>
+                        <li><a href="women/burning-urination.html" class="c-header__submenu-link">Burning Urination</a></li>
+                        <li><a href="women/blood-in-urine.html" class="c-header__submenu-link">Blood in Urine  </a></li>
+                        <li><a href="women/overactive-bladder.html" class="c-header__submenu-link">Overactive Bladder </a></li>
+                        <li><a href="women/bladder-control.html" class="c-header__submenu-link">Bladder Control Problems</a></li>
+                        <li><a href="women/kidney-stones.html" class="c-header__submenu-link">Kidney Stones</a></li>
+                        <li><a href="women/urinary-retention.html" class="c-header__submenu-link">Urinary Retention</a></li>
                             </ul>
                         </li>
                         <li class="c-header__item">
@@ -78,6 +94,7 @@
         </div>
     </header>
 
+    <!-- Mobile navigation drawer -->
     <div class="c-drawer__overlay" id="overlay" aria-hidden="true"></div>
     <div class="c-drawer" id="mobileDrawer" role="dialog" aria-modal="true" aria-label="Mobile menu" aria-hidden="true">
         <div class="c-drawer__header">
@@ -88,22 +105,42 @@
         </div>
         <nav class="c-drawer__nav" aria-label="Mobile Navigation">
             <ul class="c-drawer__menu">
-                <li class="c-drawer__item">
+                <li class="c-drawer__item is-active">
                     <a href="index.html" class="c-drawer__link">Home</a>
                 </li>
-                <!-- <li class="c-drawer__item">
-                    <a href="male-sexual.html" class="c-drawer__link">Male Sexual</a>
-                </li> -->
-                <li class="c-drawer__item c-drawer__item--submenu is-active">
-                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu">
-                        Services
+                
+                <li class="c-drawer__item c-drawer__item--submenu">
+                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu-men">
+                        For Men
                         <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
                     </button>
-                    <ul class="c-drawer__submenu" id="drawer-services-menu">
-                        <li><a href="for-men.html" class="c-drawer__link">For Men</a></li>
-                        <li><a href="for-women.html" class="c-drawer__link">For Women</a></li>
-                        <li><a href="general-urology.html" class="c-drawer__link">General Urology</a></li>
-                        <li><a href="patient.html" class="c-drawer__link">Patient</a></li>
+                    <ul class="c-drawer__submenu" id="drawer-services-menu-men">
+                        <li><a href="men/kidney-stones.html" class="c-drawer__link">Kidney Stones</a></li>
+                        <li><a href="men/prostate-enlargement-bph.html" class="c-drawer__link">Prostate Enlargement</a></li>
+                        <li><a href="men/uti.html" class="c-drawer__link">Urinary Tract Infection</a></li>
+                        <li><a href="men/blood-in-urine.html" class="c-drawer__link">Blood in Urine</a></li>
+                        <li><a href="men/urethral-stricture.html" class="c-drawer__link">Urethral Stricture</a></li>
+                        <li><a href="men/hydrocele-varicocele.html" class="c-drawer__link">Hydrocele & Varicocele</a></li>
+                        <li><a href="men/testicular-pain.html" class="c-drawer__link">Testicular Pain or Swelling </a></li>
+                        <li><a href="men/urinary-retention.html" class="c-drawer__link">Urinary Retention</a></li>
+                        <li><a href="men/male-infertility.html" class="c-drawer__link">Male Infertility Evaluation</a></li>
+                    </ul>
+                </li>
+                <li class="c-drawer__item c-drawer__item--submenu">
+                    <button type="button" class="c-drawer__toggle" aria-expanded="false" aria-controls="drawer-services-menu-women">
+                        For Women
+                        <span class="material-symbols-outlined" aria-hidden="true">expand_more</span>
+                    </button>
+                    <ul class="c-drawer__submenu" id="drawer-services-menu-women">
+                        <li><a href="women/uti.html" class="c-drawer__link">Urinary Tract Infection</a></li>
+                        <li><a href="women/frequent-urination.html" class="c-drawer__link">Frequent Urination</a></li>
+                        <li><a href="women/urine-leakage.html" class="c-drawer__link">Urine Leakage</a></li>
+                        <li><a href="women/burning-urination.html" class="c-drawer__link">Burning Urination</a></li>
+                        <li><a href="women/blood-in-urine.html" class="c-drawer__link">Blood in Urine  </a></li>
+                        <li><a href="women/overactive-bladder.html" class="c-drawer__link">Overactive Bladder </a></li>
+                        <li><a href="women/bladder-control.html" class="c-drawer__link">Bladder Control Problems</a></li>
+                        <li><a href="women/kidney-stones.html" class="c-drawer__link">Kidney Stones</a></li>
+                        <li><a href="women/urinary-retention.html" class="c-drawer__link">Urinary Retention</a></li>
                     </ul>
                 </li>
                 <li class="c-drawer__item">
@@ -126,22 +163,23 @@
         </nav>
     </div>
 
+
     <main id="main-content">
         <section id="hero" class="l-section inner-page-hero" aria-labelledby="hero-title">
             <div class="l-container">
                 <div class="hero__content">
                     <span class="c-badge u-mb-4">
                         <span class="material-symbols-outlined" aria-hidden="true">female</span>
-                        Female Urology Services
+                        Services For Women · Advanced Urology. Trusted Care.
                     </span>
                     <h1 class="hero__title" id="hero-title">
-                        Expert Urological Care for Women in Siwan
+                        Specialised care for women
                     </h1>
                     <p class="hero__description">
-                        From urinary incontinence to kidney stones and bladder conditions, JanakUROCare offers compassionate, specialised urological treatment for women of all ages.
+                        We offer specialised and comfortable care for urological problems in women. Janak Uro Care, Siwan, Bihar — respectful, private consultations and evidence-based treatment options.
                     </p>
                     <div class="hero__actions">
-                        <a href="contact.html" class="c-button c-button--primary">Book Appointment</a>
+                        <a href="contact.html" class="c-button c-button--primary">Book Your Appointment Now &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -167,7 +205,7 @@
                         <div class="services-women__card-content">
                             <h3 class="c-card__title services-women__card-title">Urinary Tract Infection (UTI)</h3>
                             <p class="c-card__excerpt">UTIs are one of the most common infections in women, caused by bacteria entering the urinary tract. We provide targeted antibiotic treatment and investigate recurrent cases for underlying structural causes.</p>
-                            <a href="contact.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                            <a href="women/uti.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
                         </div>
                     </article>
                     <article class="c-card services-women__card">
@@ -177,7 +215,7 @@
                         <div class="services-women__card-content">
                             <h3 class="c-card__title services-women__card-title">Urinary Incontinence</h3>
                             <p class="c-card__excerpt">Urinary incontinence — leaking urine on coughing, sneezing, or urgency — affects millions of women and is highly treatable. We offer pelvic floor therapy, bladder retraining, and surgical options like TVT/TOT sling procedures.</p>
-                            <a href="contact.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                            <a href="women/urine-leakage.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
                         </div>
                     </article>
                     <article class="c-card services-women__card">
@@ -187,7 +225,7 @@
                         <div class="services-women__card-content">
                             <h3 class="c-card__title services-women__card-title">Kidney Stones</h3>
                             <p class="c-card__excerpt">Kidney stones cause severe flank pain and can affect women at any age, especially during pregnancy. We offer painless laser stone removal (RIRS/PCNL) with minimal recovery time.</p>
-                            <a href="contact.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                            <a href="women/kidney-stones.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
                         </div>
                     </article>
                     <article class="c-card services-women__card">
@@ -197,7 +235,7 @@
                         <div class="services-women__card-content">
                             <h3 class="c-card__title services-women__card-title">Hematuria (Blood in Urine)</h3>
                             <p class="c-card__excerpt">Blood in urine is a warning sign that should always be investigated promptly, even if painless. We perform urine cytology, ultrasound, and cystoscopy to identify and treat the underlying cause.</p>
-                            <a href="contact.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                            <a href="women/blood-in-urine.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
                         </div>
                     </article>
                     <article class="c-card services-women__card">
@@ -207,7 +245,7 @@
                         <div class="services-women__card-content">
                             <h3 class="c-card__title services-women__card-title">Overactive Bladder (OAB)</h3>
                             <p class="c-card__excerpt">Overactive bladder causes sudden, uncontrollable urges to urinate and frequent trips to the bathroom. We offer bladder retraining, medications, Botox bladder injections, and Interstim neuromodulation therapy.</p>
-                            <a href="contact.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                            <a href="women/overactive-bladder.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
                         </div>
                     </article>
                     <article class="c-card services-women__card">
@@ -217,7 +255,7 @@
                         <div class="services-women__card-content">
                             <h3 class="c-card__title services-women__card-title">Bladder Prolapse (Cystocele)</h3>
                             <p class="c-card__excerpt">Bladder prolapse occurs when the bladder drops into the vaginal wall, causing pressure and urinary symptoms. We offer surgical repair options including minimally invasive laparoscopic sacrocolpopexy.</p>
-                            <a href="contact.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+                            <a href="women/bladder-control.html" class="c-button c-button--secondary services-women__read-more">Read more <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
                         </div>
                     </article>
                     <article class="c-card services-women__card">

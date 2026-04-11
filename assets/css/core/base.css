@@ -5,6 +5,12 @@ html {
   overflow-x: hidden;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   font-size: var(--font-size-300);
   font-family: var(--font-body);
@@ -143,4 +149,39 @@ button {
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+/**
+ * Skip to main content — visible on keyboard focus (WCAG 2.4.1)
+ */
+.u-skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 10000;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-200);
+  font-weight: var(--font-weight-medium);
+  color: var(--btn-primary-contrast);
+  background: var(--color-dominant-dark);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: clip-path var(--transition-fast), clip var(--transition-fast), width var(--transition-fast),
+    height var(--transition-fast), padding var(--transition-fast);
+}
+
+.u-skip-link:focus {
+  clip: auto;
+  clip-path: none;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-dominant);
 }

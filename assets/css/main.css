@@ -24,16 +24,6 @@ main {
   color: inherit;
 }
 
-::selection {
-  background: rgba(31, 89, 156, 0.15);
-  color: inherit;
-}
-
-::selection {
-  background: rgba(31, 89, 156, 0.15);
-  color: inherit;
-}
-
 /* =================================================
    PAGE: HOME — hero, stats, specialists, services, testimonials, faq
    ================================================= */
@@ -97,6 +87,16 @@ main {
   .hero__actions .c-button {
     width: auto;
   }
+
+  /* Improve text readability over busy hero photography */
+  .hero::before {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.82) 42%,
+      rgba(255, 255, 255, 0.35) 100%
+    );
+  }
 }
 
 .hero__image {
@@ -112,6 +112,91 @@ main {
 
   .hero::before {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.82) 100%);
+  }
+}
+
+/* Service / condition inner pages — match index.html hero: text + image grid */
+.hero.hero--service {
+  min-height: clamp(46dvh, 58vh, 74vh);
+  padding-block: clamp(var(--space-6), 5vw, var(--space-8));
+}
+
+.hero.hero--service .hero__grid {
+  align-items: center;
+}
+
+.hero.hero--service .hero__description {
+  max-width: 38rem;
+  margin-inline: 0;
+}
+
+.hero.hero--service .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.hero__image--clinical {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(31, 89, 156, 0.12);
+  box-shadow:
+    0 0.25rem 0.75rem rgba(15, 23, 42, 0.06),
+    0 1rem 2.5rem rgba(31, 89, 156, 0.08);
+  background: var(--color-bg);
+  max-width: 36rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.hero__image--clinical img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+@media (min-width: 768px) {
+  .hero.hero--service .hero__image--clinical {
+    margin-inline: 0;
+    max-width: none;
+  }
+}
+
+/* Condition page sections — match index.html: same heading width as home, body width as specialists card */
+.l-section--condition-content .c-section-heading {
+  max-width: 65rem;
+  margin-inline: auto;
+}
+
+.l-section--condition-content .term__wrapper {
+  max-width: min(72rem, 100%);
+  margin-inline: auto;
+}
+
+/* Clinical image band — uses .specialists + .c-card--media like index “Meet Your Doctor” (post-hero only) */
+.condition-page-visual .c-card__media {
+  min-height: clamp(12rem, 40vw, 22rem);
+}
+
+.condition-page-visual .c-card__media img {
+  object-fit: contain;
+  object-position: center;
+  padding: var(--space-3);
+  background: var(--color-bg);
+  position: relative;
+  inset: auto;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+}
+
+@media (min-width: 768px) {
+  .condition-page-visual .c-card__media img {
+    position: static;
+    min-height: clamp(14rem, 28vw, 24rem);
   }
 }
 
@@ -177,7 +262,12 @@ main {
 }
 
 .inner-page-hero .hero__actions {
-  margin-top: var(--space-2);
+  margin-top: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+  align-items: center;
 }
 
 .inner-page-hero .hero__actions .c-button {
@@ -202,10 +292,174 @@ main {
   }
 }
 
+/* Condition pages — same blog-style hero, comfortable vertical rhythm */
+.inner-page-hero--condition {
+  min-height: clamp(32dvh, 38vh, 44vh);
+  padding-block: clamp(var(--space-6), 5vw, var(--space-8));
+}
+
+/* Legacy: flat figure band (prefer .condition-page-visual + c-card — matches index specialists) */
+.condition-visual-section {
+  border-bottom: 1px solid var(--section-border);
+}
+
+.condition-visual {
+  margin: 0 auto;
+  max-width: min(72rem, 100%);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  background: var(--color-bg);
+}
+
+.condition-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+/* Inner page hero — optional split layout (text + clinical illustration) */
+.inner-page-hero--split .l-container {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  width: 100%;
+}
+
+.inner-page-hero--split .hero__visual {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(31, 89, 156, 0.14);
+  box-shadow: 0 0.375rem 1.75rem rgba(15, 23, 42, 0.09);
+  background: var(--color-bg);
+  max-width: 28rem;
+  margin-inline: auto;
+}
+
+.inner-page-hero--split .hero__visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: middle;
+}
+
+.inner-page-hero--split .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .inner-page-hero--split .l-container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+    gap: var(--space-7);
+    justify-content: stretch;
+    text-align: left;
+  }
+
+  .inner-page-hero--split .hero__content {
+    text-align: left;
+    margin-inline: 0;
+    max-width: none;
+  }
+
+  .inner-page-hero--split .hero__description {
+    margin-inline: 0;
+    max-width: 40rem;
+  }
+
+  .inner-page-hero--split .hero__visual {
+    margin-inline: 0;
+    max-width: none;
+  }
+
+  .inner-page-hero--split .hero__actions {
+    justify-content: flex-start;
+  }
+}
+
+/* Condition pages — wide media highlight (spotlight band) */
+.condition-spotlight .condition-spotlight__card {
+  max-width: min(72rem, 100%);
+  margin-inline: auto;
+  box-shadow:
+    0 0.0625rem 0.1875rem rgba(15, 23, 42, 0.06),
+    0 0.75rem 2rem rgba(31, 89, 156, 0.08);
+}
+
+.condition-spotlight .condition-spotlight__media img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.condition-spotlight .condition-spotlight__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.condition-spotlight .condition-spotlight__lead {
+  font-size: var(--font-size-300);
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0 0 var(--space-5);
+}
+
+.condition-spotlight .condition-spotlight__highlights {
+  margin-bottom: var(--space-5);
+}
+
+.condition-spotlight .condition-spotlight__actions,
+.condition-spotlight .hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+  margin-top: auto;
+  padding-top: var(--space-2);
+}
+
 /* Laser procedures (laser-surgery page) — 3 cards, icon + list, follow index design */
 .laser-procedures__grid {
   margin-top: var(--space-content-top);
   --grid-gap: var(--space-5);
+}
+
+/* Condition inner pages — equal-height pillar cards, subtle elevation */
+.laser-procedures--stones .laser-procedures__grid--stones,
+.laser-procedures--condition .laser-procedures__grid--stones {
+  align-items: stretch;
+  --grid-gap: clamp(var(--space-5), 3vw, var(--space-6));
+}
+
+.laser-procedures--stones .laser-procedures__card,
+.laser-procedures--condition .laser-procedures__card {
+  height: 100%;
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  box-shadow: 0 0.0625rem 0.1875rem rgba(15, 23, 42, 0.05);
+  gap: var(--space-2);
+}
+
+.laser-procedures--stones .laser-procedures__card:hover,
+.laser-procedures--condition .laser-procedures__card:hover {
+  box-shadow: 0 0.25rem 0.75rem rgba(31, 89, 156, 0.08);
+}
+
+.laser-procedures--stones .laser-procedures__description,
+.laser-procedures--condition .laser-procedures__description {
+  margin-bottom: 0;
+  flex: 1 1 auto;
+}
+
+/* Title-only pillar cards (symptom lines) */
+.laser-procedures--condition .laser-procedures__card .laser-procedures__title:last-child {
+  margin-bottom: 0;
 }
 
 .laser-procedures__card {
@@ -216,7 +470,9 @@ main {
   text-align: left;
   padding: var(--space-card-inner-lg);
   border: var(--border-width-1) solid var(--color-border);
-  transition: border-color var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .laser-procedures__card:hover {
@@ -248,6 +504,17 @@ main {
   line-height: 1.3;
 }
 
+.laser-procedures__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.laser-procedures__title a:hover {
+  color: var(--color-dominant);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .laser-procedures__description {
   font-size: var(--font-size-300);
   line-height: 1.65;
@@ -261,6 +528,81 @@ main {
 
 .laser-procedures__card .c-list--check li {
   color: var(--color-text);
+}
+
+/* Condition pages — aftercare: horizontal two panes + CTA strip */
+.condition-aftercare .condition-aftercare__grid {
+  margin-top: 0;
+  --grid-gap: var(--space-6);
+  align-items: stretch;
+}
+
+.condition-aftercare .condition-aftercare__pane {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.condition-aftercare .condition-aftercare__intro {
+  font-size: var(--font-size-300);
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0 0 var(--space-5);
+  flex: 1 1 auto;
+}
+
+.condition-aftercare .condition-aftercare__pane--cta {
+  min-height: 100%;
+}
+
+.condition-aftercare .condition-aftercare__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.condition-aftercare .condition-aftercare__cta .c-button {
+  width: 100%;
+  max-width: 20rem;
+}
+
+@media (min-width: 768px) {
+  .condition-aftercare .condition-aftercare__grid {
+    --grid-gap: clamp(var(--space-6), 4vw, var(--space-8));
+  }
+
+  .condition-aftercare .condition-aftercare__grid > .condition-aftercare__pane:first-child {
+    padding-right: var(--space-6);
+    border-right: 1px solid var(--color-border);
+  }
+
+  .condition-aftercare .condition-aftercare__cta .c-button {
+    width: auto;
+    min-width: 14rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .condition-aftercare .condition-aftercare__grid > .condition-aftercare__pane:first-child {
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .condition-aftercare .condition-aftercare__cta {
+    justify-content: center;
+  }
+
+  .condition-aftercare .condition-aftercare__cta .c-button {
+    max-width: 100%;
+  }
 }
 
 .laser-procedures__actions {
@@ -967,6 +1309,111 @@ main {
   --grid-gap: var(--space-5);
 }
 
+/* Two-column patient guide: illustration + text — equal column heights, image always visible */
+.services-men__grid--guide {
+  align-items: stretch;
+  --grid-gap: clamp(var(--space-5), 4vw, var(--space-7));
+}
+
+/* Image column: full width of cell (avoid .c-card--center narrowing in grid) */
+.services-men__grid--guide > .services-men__guide-media.c-card--media {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+}
+
+/* Copy column: readable typography */
+.services-men__grid--guide .term__wrapper--guide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.services-men__grid--guide .term__wrapper--guide .term__block:not(.term__block--last) {
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.services-men__grid--guide .term__heading {
+  font-size: var(--font-size-500);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-heading);
+  margin: 0 0 var(--space-3);
+  line-height: 1.3;
+}
+
+.services-men__grid--guide .term__wrapper--guide > .term__block > p {
+  font-size: var(--font-size-300);
+  line-height: 1.65;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.services-men__grid--guide .term__wrapper--guide .term__muted {
+  margin-bottom: var(--space-3);
+}
+
+.services-men__grid--guide > .services-men__guide-copy {
+  min-width: 0;
+  min-height: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-men__grid--guide > .services-men__guide-copy .term__wrapper {
+  flex: 1 1 auto;
+}
+
+/*
+  Inner grid with 1fr collapsed to 0 when the card had no definite height — image disappeared.
+  Use flex column + flex:1 on .c-card__media so it fills the row height from the outer 2-col grid.
+*/
+.services-men__grid--guide > .services-men__guide-media {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  align-self: stretch;
+}
+
+.services-men__grid--guide > .services-men__guide-media .c-card__media {
+  position: relative;
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 14rem;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.services-men__grid--guide > .services-men__guide-media .c-card__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .services-men__grid--guide > .services-men__guide-media .c-card__media {
+    aspect-ratio: 16 / 10;
+    min-height: 11rem;
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .services-men__grid--guide > .services-men__guide-media {
+    min-height: 100%;
+  }
+
+  .services-men__grid--guide > .services-men__guide-media .c-card__media {
+    min-height: 0;
+  }
+}
+
 .services-men__card,
 .services-women__card {
   padding: 0;
@@ -1007,9 +1454,7 @@ main {
   object-fit: cover;
   object-position: center;
   display: block;
-  z-index: 1;
-  padding: var(--space-2);
-  border-radius: var(--radius-2xl);
+  z-index: 1;  
 }
 
 .services-men__card-placeholder,
@@ -1038,7 +1483,7 @@ main {
 
 .services-men__card-title,
 .services-women__card-title {
-  margin-bottom: var(--space-2);
+  margin-bottom: 0;
   color: var(--color-heading);
   font-size: var(--font-size-400);
   line-height: 1.3;
@@ -1098,8 +1543,8 @@ main {
 @media (min-width: 992px) {
   .services-men__card-image,
   .services-women__card-image {
-    width: 16.25rem;
-    min-width: 16.25rem;
+    width: 5rem;
+    min-width:5rem;
   }
 }
 
@@ -1243,6 +1688,37 @@ main {
 }
 
 /* =================================================
+   Patient guides — term lists outside .terms-content (icon + text alignment)
+   ================================================= */
+
+.term__wrapper .term__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-4);
+}
+
+.term__wrapper .term__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--font-size-300);
+  line-height: 1.65;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+}
+
+.term__wrapper .term__list li:last-child {
+  margin-bottom: 0;
+}
+
+.term__wrapper .term__list li .material-symbols-outlined {
+  font-size: 1.25rem;
+  color: var(--color-dominant);
+  flex-shrink: 0;
+  margin-top: 0.15em;
+}
+
+/* =================================================
    Terms & Conditions page content
    ================================================= */
 
@@ -1273,7 +1749,6 @@ main {
 
 .terms-content .term__block {
   padding-bottom: var(--space-6);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .terms-content .term__block--last,
