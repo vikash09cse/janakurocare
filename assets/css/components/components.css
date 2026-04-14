@@ -25,6 +25,18 @@ BUTTON
   box-sizing: border-box;
 }
 
+@media (max-width: 767px) {
+  .c-button {
+    height: auto;
+    min-height: var(--btn-height);
+    padding-top: var(--space-2);
+    padding-bottom: var(--space-2);
+    white-space: normal;
+    line-height: 1.35;
+    word-break: break-word;
+  }
+}
+
 .c-button:focus-visible {
   outline: none;
   box-shadow: 0 0 0 var(--focus-ring-offset) var(--color-bg), 0 0 0 calc(var(--focus-ring-offset) + 0.125rem) var(--color-dominant);
@@ -190,43 +202,69 @@ CARD
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  min-height: var(--eyebrow-height);
-  padding: 0 var(--space-4);
-  background: var(--badge-bg);
-  border: 1px solid var(--badge-border);
-  border-radius: var(--radius-full);
-  font-size: var(--font-size-300);
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: var(--font-size-200);
   font-weight: var(--font-weight-medium);
-  color: var(--badge-color);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
   box-sizing: border-box;
 }
 
-.c-badge .material-symbols-outlined {
-  color: var(--badge-icon-color);
-  font-size: 1.25rem;
+.c-badge::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background: currentColor;
+  border-radius: var(--radius-full);
   flex-shrink: 0;
 }
 
+.c-badge .material-symbols-outlined {
+  display: none;
+}
+
 .c-badge::after {
-  content: "›";
-  margin-left: var(--space-1);
-  color: var(--badge-chevron-color);
-  font-size: 1.125rem;
-  font-weight: 400;
+  content: none;
 }
 
 .c-badge--teal {
-  background: var(--color-teal-pale);
-  border-color: rgba(15, 118, 110, 0.25);
   color: var(--color-teal-darker);
 }
 
 .c-badge--teal .material-symbols-outlined {
-  color: var(--color-teal-dark);
+  display: none;
 }
 
-.c-badge--teal::after {
-  color: var(--color-text-muted);
+/* Eyebrow — mobile: label + rule below only, centered */
+@media (max-width: 767px) {
+  .c-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .c-badge::before {
+    display: none;
+  }
+
+  .c-badge::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background: currentColor;
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+  }
 }
 
 /* =================================================
@@ -358,12 +396,33 @@ CARD
   align-items: center;
   gap: var(--space-1);
   color: var(--color-heading);
-  transition: var(--transition-fast);
+  transition: color var(--transition-fast);
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.c-header__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15rem;
+  height: 0.125rem;
+  border-radius: var(--radius-full);
+  background: var(--color-dominant);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform var(--transition-fast);
 }
 
 .c-header__link:hover,
 .c-header__item.is-active .c-header__link {
-  color: var(--color-text);
+  color: var(--color-dominant-dark);
+}
+
+.c-header__link:hover::after,
+.c-header__item.is-active .c-header__link::after {
+  transform: scaleX(1);
 }
 
 /* SUBMENU TOGGLE BUTTON */
@@ -420,6 +479,11 @@ DESKTOP SUBMENU
 .c-header__submenu-link:hover {
   background: var(--color-secondary-light);
   color: var(--color-heading);
+}
+
+.c-header__submenu-link.is-active {
+  background: var(--color-secondary-light);
+  color: var(--color-dominant-dark);
 }
 
 .c-header__submenu-item {
@@ -552,9 +616,18 @@ MOBILE DRAWER
   font-size: var(--font-size-300);
   text-decoration: none;
   color: var(--color-heading);
-  padding: var(--space-3) 0;
+  padding: var(--space-3) var(--space-2);
   min-height: var(--touch-target-min);
   -webkit-tap-highlight-color: transparent;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.c-drawer__link:hover,
+.c-drawer__link.is-active,
+.c-drawer__item.is-active > .c-drawer__link {
+  background: var(--color-secondary-light);
+  color: var(--color-dominant-dark);
 }
 
 
@@ -574,11 +647,19 @@ MOBILE DRAWER
   text-align: left;
   -webkit-tap-highlight-color: transparent;
   border-radius: var(--radius-sm);
+  color: var(--color-heading);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .c-drawer__toggle:focus-visible {
   outline: var(--focus-ring);
   outline-offset: 0.125rem;
+}
+
+.c-drawer__toggle:hover,
+.c-drawer__item--submenu.is-active > .c-drawer__toggle {
+  background: var(--color-secondary-light);
+  color: var(--color-dominant-dark);
 }
 
 .c-drawer__submenu{

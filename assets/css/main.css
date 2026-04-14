@@ -25,6 +25,105 @@ main {
 }
 
 /* =================================================
+   GLOBAL ANIMATION — subtle, healthcare-friendly motion
+   ================================================= */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(1.1rem);
+  transition:
+    opacity 0.55s ease-out,
+    transform 0.55s ease-out;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.c-card,
+.services-men__card,
+.services-women__card,
+.laser-procedures__card,
+.faq__item {
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    border-color var(--transition-fast);
+}
+
+.c-card:hover,
+.services-men__card:hover,
+.services-women__card:hover,
+.laser-procedures__card:hover,
+.faq__item:hover {
+  transform: translateY(-0.1875rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .c-card,
+  .services-men__card,
+  .services-women__card,
+  .laser-procedures__card,
+  .faq__item {
+    transition: border-color var(--transition-fast);
+  }
+
+  .c-card:hover,
+  .services-men__card:hover,
+  .services-women__card:hover,
+  .laser-procedures__card:hover,
+  .faq__item:hover {
+    transform: none;
+  }
+}
+
+/* =================================================
+   GLOBAL CARD CONTENT SPACING — consistent rhythm
+   ================================================= */
+
+.c-card :where(.c-card__title, h3, h4, h5, h6) {
+  margin-top: 0;
+  margin-bottom: var(--space-2);
+}
+
+.c-card :where(p, ul, ol) {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+.c-card :where(p, ul, ol):last-child {
+  margin-bottom: 0;
+}
+
+.c-card__body,
+.services-men__card-content,
+.services-women__card-content,
+.about-cards__card,
+.contact-section__card.c-card,
+.testimonials__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.services-men__card-content > *:last-child,
+.services-women__card-content > *:last-child,
+.about-cards__card > *:last-child,
+.contact-section__card.c-card > *:last-child,
+.testimonials__card > *:last-child {
+  margin-bottom: 0;
+}
+
+/* =================================================
    PAGE: HOME — hero, stats, specialists, services, testimonials, faq
    ================================================= */
 
@@ -155,7 +254,6 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  vertical-align: middle;
 }
 
 @media (min-width: 768px) {
@@ -317,7 +415,6 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  vertical-align: middle;
 }
 
 /* Inner page hero — optional split layout (text + clinical illustration) */
@@ -343,7 +440,6 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  vertical-align: middle;
 }
 
 .inner-page-hero--split .hero__actions {
@@ -437,6 +533,11 @@ main {
   --grid-gap: clamp(var(--space-5), 3vw, var(--space-6));
 }
 
+.laser-procedures--condition .laser-procedures__grid--stones {
+  align-items: start;
+  --grid-gap: clamp(var(--space-3), 2vw, var(--space-5));
+}
+
 .laser-procedures--stones .laser-procedures__card,
 .laser-procedures--condition .laser-procedures__card {
   height: 100%;
@@ -460,6 +561,59 @@ main {
 /* Title-only pillar cards (symptom lines) */
 .laser-procedures--condition .laser-procedures__card .laser-procedures__title:last-child {
   margin-bottom: 0;
+}
+
+/* Condition pages — common symptoms cards: cleaner, easier scanning */
+.laser-procedures--condition .c-section-heading__subtitle {
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.laser-procedures--condition .laser-procedures__card {
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: var(--space-2) 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--space-3);
+  row-gap: var(--space-2);
+}
+
+.laser-procedures--condition .laser-procedures__icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  margin-top: 0;
+  margin-bottom: 0;
+  background: rgba(31, 89, 156, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.laser-procedures--condition .laser-procedures__icon .material-symbols-outlined {
+  font-size: 1rem;
+  color: var(--color-dominant-dark);
+}
+
+.laser-procedures--condition .laser-procedures__title {
+  font-size: var(--font-size-400);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.laser-procedures--condition .laser-procedures__grid {
+  margin-top: var(--space-5);
+}
+
+.laser-procedures--condition .laser-procedures__card:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 .laser-procedures__card {
@@ -530,11 +684,32 @@ main {
   color: var(--color-text);
 }
 
-/* Condition pages — aftercare: horizontal two panes + CTA strip */
+/* Condition pages — aftercare: premium two-pane urgent guidance block */
 .condition-aftercare .condition-aftercare__grid {
   margin-top: 0;
   --grid-gap: var(--space-6);
   align-items: stretch;
+}
+
+.condition-aftercare .c-section-heading {
+  text-align: center;
+  max-width: 56rem;
+}
+
+.condition-aftercare .c-section-heading__subtitle {
+  max-width: 48rem;
+  margin-inline: 0;
+}
+
+.condition-aftercare .condition-aftercare__wrapper {
+  background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+  border: 1px solid rgba(31, 89, 156, 0.14);
+  border-radius: var(--radius-md);
+  padding: clamp(var(--space-4), 3vw, var(--space-6));
+  padding-bottom: clamp(var(--space-5), 3.4vw, var(--space-7));
+  box-shadow:
+    0 0.125rem 0.5rem rgba(15, 23, 42, 0.05),
+    0 0.625rem 1.5rem rgba(31, 89, 156, 0.08);
 }
 
 .condition-aftercare .condition-aftercare__pane {
@@ -542,13 +717,96 @@ main {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding-bottom: 0;
-  border-bottom: none;
+  padding: clamp(var(--space-4), 2.8vw, var(--space-5));
+  padding-bottom: clamp(var(--space-5), 3vw, var(--space-6));
+  border: 1px solid rgba(31, 89, 156, 0.14);
+  border-radius: var(--radius-md);
+  background: var(--color-bg);
+  box-shadow: 0 0.0625rem 0.25rem rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.condition-aftercare .condition-aftercare__pane .term__heading {
+  margin: 0 0 var(--space-3);
+  font-size: var(--font-size-500);
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.condition-aftercare .condition-aftercare__pane:first-child .term__heading::after,
+.condition-aftercare .condition-aftercare__pane--cta .term__heading::after {
+  font-size: var(--font-size-100);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.condition-aftercare .condition-aftercare__pane:first-child .term__heading::after {
+  content: "Urgent";
+  color: #92400e;
+  background: rgba(245, 158, 11, 0.18);
+}
+
+.condition-aftercare .condition-aftercare__pane--cta .term__heading::after {
+  content: "Next Step";
+  color: #1e3a8a;
+  background: rgba(59, 130, 246, 0.16);
+}
+
+.condition-aftercare .condition-aftercare__pane::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 0.25rem;
+}
+
+.condition-aftercare .condition-aftercare__pane:first-child::before {
+  background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+}
+
+.condition-aftercare .condition-aftercare__pane--cta::before {
+  background: linear-gradient(90deg, #1f599c 0%, #3b82f6 100%);
+}
+
+.condition-aftercare .condition-aftercare__pane:first-child .term__muted {
+  margin: 0 0 var(--space-3);
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.condition-aftercare .condition-aftercare__pane:first-child .term__list {
+  margin: 0;
+}
+
+.condition-aftercare .condition-aftercare__pane:first-child .term__list li {
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: 0;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  background: linear-gradient(180deg, #fff9ef 0%, #fff3da 100%);
+  line-height: 1.6;
+}
+
+.condition-aftercare .condition-aftercare__pane:first-child .term__list li .material-symbols-outlined {
+  margin-top: 0.12rem;
+  color: #b45309;
 }
 
 .condition-aftercare .condition-aftercare__intro {
   font-size: var(--font-size-300);
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--color-text);
   margin: 0 0 var(--space-5);
   flex: 1 1 auto;
@@ -556,6 +814,7 @@ main {
 
 .condition-aftercare .condition-aftercare__pane--cta {
   min-height: 100%;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
 }
 
 .condition-aftercare .condition-aftercare__cta {
@@ -566,6 +825,7 @@ main {
   align-items: center;
   margin-top: auto;
   padding-top: var(--space-4);
+  padding-bottom: var(--space-1);
   border-top: 1px solid var(--color-border);
 }
 
@@ -580,8 +840,7 @@ main {
   }
 
   .condition-aftercare .condition-aftercare__grid > .condition-aftercare__pane:first-child {
-    padding-right: var(--space-6);
-    border-right: 1px solid var(--color-border);
+    margin-right: 0;
   }
 
   .condition-aftercare .condition-aftercare__cta .c-button {
@@ -591,9 +850,19 @@ main {
 }
 
 @media (max-width: 767px) {
+  .condition-aftercare .c-section-heading,
+  .condition-aftercare .c-section-heading__subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .condition-aftercare .condition-aftercare__pane .term__heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .condition-aftercare .condition-aftercare__grid > .condition-aftercare__pane:first-child {
-    padding-bottom: var(--space-6);
-    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 0;
   }
 
   .condition-aftercare .condition-aftercare__cta {
@@ -617,6 +886,10 @@ main {
 @media (max-width: 767px) {
   .laser-procedures__card {
     padding: var(--space-5);
+  }
+
+  .services-men__grid--guide .term__wrapper--guide .term__block--last {
+    padding: var(--space-3);
   }
 
   .laser-procedures__actions .c-button {
@@ -1353,6 +1626,37 @@ main {
   margin-bottom: var(--space-3);
 }
 
+/* Patient-friendly guide — common symptoms block gets dedicated visual grouping */
+.services-men__grid--guide .term__wrapper--guide .term__block--last {
+  padding: var(--space-4);
+  border: 1px solid rgba(31, 89, 156, 0.15);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, #f8fbff 0%, #f2f8ff 100%);
+}
+
+.services-men__grid--guide .term__wrapper--guide .term__block--last .term__muted {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.services-men__grid--guide .term__wrapper--guide .term__block--last .term__list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.services-men__grid--guide .term__wrapper--guide .term__block--last .term__list li {
+  margin-bottom: 0;
+  padding: var(--space-1) 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.services-men__grid--guide .term__wrapper--guide .term__block--last .term__list li .material-symbols-outlined {
+  color: var(--color-dominant);
+}
+
 .services-men__grid--guide > .services-men__guide-copy {
   min-width: 0;
   min-height: 0;
@@ -2045,4 +2349,129 @@ main {
 
 .for-men-cta .laser-procedures__actions {
   margin-top: var(--space-5);
+}
+
+/* =================================================
+   SITEWIDE DE-BOXY TUNING — lighter surfaces
+   ================================================= */
+
+.c-card,
+.c-card--media,
+.services-men__card,
+.services-women__card,
+.laser-procedures__card,
+.testimonials__card,
+.about-cards__card,
+.contact-section__card.c-card,
+.terms-content .term__wrapper,
+.condition-aftercare .condition-aftercare__pane {
+  border-color: rgba(31, 89, 156, 0.12);
+  box-shadow: none;
+  background: var(--color-bg);
+}
+
+.c-card:hover,
+.services-men__card:hover,
+.services-women__card:hover,
+.laser-procedures__card:hover,
+.about-cards__card:hover,
+.contact-section__card.c-card:hover {
+  box-shadow: 0 0.125rem 0.5rem rgba(31, 89, 156, 0.05);
+}
+
+.laser-procedures--condition .laser-procedures__card,
+.services-men__grid--guide .term__wrapper--guide .term__block--last,
+.condition-aftercare .condition-aftercare__pane--cta,
+.condition-aftercare .condition-aftercare__pane:first-child .term__list li {
+  background: var(--color-bg);
+}
+
+.condition-aftercare .condition-aftercare__wrapper {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* =================================================
+   MOBILE — section intro headings center-aligned
+   ================================================= */
+
+@media (max-width: 767px) {
+  .c-section-heading,
+  .c-section-heading__title,
+  .c-section-heading__subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .l-section--condition-content .c-section-heading,
+  .l-section--condition-content .c-section-heading__title,
+  .l-section--condition-content .c-section-heading__subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .condition-aftercare .c-section-heading,
+  .condition-aftercare .c-section-heading__title,
+  .condition-aftercare .c-section-heading__subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .laser-procedures--condition .c-section-heading__subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .about-intro__header,
+  .about-intro__title,
+  .about-intro__subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .expertise-section__title {
+    text-align: center;
+  }
+
+  .contact-section__header,
+  .contact-section__title,
+  .contact-section__subtitle {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  /* Home + service / condition hero lead copy */
+  .hero .hero__content,
+  .hero .hero__title,
+  .hero .hero__description {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .hero .hero__actions {
+    justify-content: center;
+  }
+
+  .hero.hero--service .hero__actions {
+    justify-content: center;
+  }
+
+  /* Split inner-page hero: title block reads as section intro */
+  .inner-page-hero--split .hero__content,
+  .inner-page-hero--split .hero__title,
+  .inner-page-hero--split .hero__description {
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .inner-page-hero--split .hero__actions {
+    justify-content: center;
+  }
+
+  /* Patient guide column headings */
+  .services-men__grid--guide .term__heading {
+    text-align: center;
+  }
 }
